@@ -9,6 +9,12 @@
     "reports",
     "laravel"
   ],
+    "repositories": [
+  {
+    "type": "vcs",
+    "url": "https://github.com/trevnetmedia/laravel-analytics.git"
+  }
+],
   "homepage": "https://github.com/trevnetmedia/laravel-analytics",
   "license": "MIT",
   "authors": [
