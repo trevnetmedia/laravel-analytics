@@ -48,5 +48,8 @@
     "psr-4": {
       "trevnetmedia\\Analytics\\Tests\\": "tests"
     }
-  }
+  },
+    "config": {
+    "minimum-stability": "dev"
+}
 }
