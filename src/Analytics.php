@@ -75,9 +75,10 @@ class Analytics
         });
     }
 
-    public function fetchMostVisitedPages(Period $period, int $maxResults = 20): Collection
+    public function fetchMostVisitedPages(string $viewID, Period $period, int $maxResults = 20): Collection
     {
         $response = $this->performQuery(
+            $viewID,
             $period,
             'ga:pageviews',
             [
@@ -160,10 +161,10 @@ class Analytics
      *
      * @return array|null
      */
-    public function performQuery(Period $period, string $metrics, array $others = [])
+    public function performQuery(string $viewID, Period $period, string $metrics, array $others = [])
     {
         return $this->client->performQuery(
-            $this->viewId,
+            $viewId,
             $period->startDate,
             $period->endDate,
             $metrics,
